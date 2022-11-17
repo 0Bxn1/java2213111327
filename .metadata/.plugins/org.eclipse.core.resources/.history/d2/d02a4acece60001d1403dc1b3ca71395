@@ -1,0 +1,14 @@
+import javax.swing.*;
+import java.text.*;
+
+public class Lab101 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner (System.in);
+		DecimalFormat ss = new DecimalFormat("#,###.00");
+		System.out.print("Input Product Name : ");
+		
+
+	}
+
+}

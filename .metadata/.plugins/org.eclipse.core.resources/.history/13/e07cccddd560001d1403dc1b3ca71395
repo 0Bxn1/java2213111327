@@ -1,0 +1,29 @@
+import java.util.*;
+import java.text.*;
+
+public class Lab101 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		DecimalFormat frm = new DecimalFormat("#,###.00");
+		System.out.print("Input Product Name : ");
+		String productName = scan.nextLine();
+		System.out.print("Input Product Unit : ");
+		int productUnit = scan.nextInt();
+		System.out.print("Input Price per unit : ");
+		float pricePerUnit = scan.nextFloat();
+		scan.nextLine();
+		System.out.println("-------------------------------------------------------");
+		float totalPrice = pricePerUnit*productUnit;
+		System.out.println("Total Price is :"+frm.format(totalPrice));
+		System.out.println("-------------------------------------------------------");
+		System.out.println("How many discount (%) :");
+		String productper = scan.nextLine();
+		float pricewhitPer = totalPrice + (totalPrice*1/100);
+		System.out.println("-------------------------------------------------------");
+		System.out.println("Discountfrom "+totalPrice*15/100+"baht");
+		System.out.println("Amount to be paid"+totalPrice);
+		
+	}
+
+}

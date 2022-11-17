@@ -1,0 +1,17 @@
+package project1;
+import java.util.*;
+import java.text.*;
+
+public class ex1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Input two integers (a b) : ");
+		int a =scan.nextInt();
+		int b =scan.nextInt();
+		System.out.print("Sum two integers : "+(a+b));
+        
+	}
+
+}

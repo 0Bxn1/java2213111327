@@ -1,0 +1,13 @@
+import javax.swing.*;
+
+public class lab3 {
+
+	public static void main(String[] args) {
+		String productNum = JOptionPane.showInputDialog("Input product name:");
+		String productUnitstr = JOptionPane.showInputDialog
+				(How )
+		
+
+	}
+
+}
