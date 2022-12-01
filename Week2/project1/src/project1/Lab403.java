@@ -1,0 +1,25 @@
+package project1;
+import java.text.*;
+import java.util.*;
+import javax.swing.*;
+
+public class Lab403 {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		int b = 0;
+		System.out.print("Message : ");
+		String a= scan.nextLine();
+		if(a.toLowerCase().indexOf("nichi")>=0) {
+			b++;
+		}
+		if(b==0) {
+			System.out.print(a);
+		}
+		else {
+			System.out.print("Nichi is a sentence");
+		}
+	}
+
+}

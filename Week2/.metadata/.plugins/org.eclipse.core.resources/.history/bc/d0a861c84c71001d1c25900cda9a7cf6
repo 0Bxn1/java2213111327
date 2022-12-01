@@ -1,0 +1,15 @@
+package project1;
+import java.text.*;
+import java.util.*;
+import javax.swing.*;
+
+public class Lab401 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("fullName : ");
+		String sentence = scan.nextLine();
+        
+	}
+
+}
