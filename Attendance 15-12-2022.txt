@@ -1,0 +1,4 @@
+Studentid : 2213111327
+fullname : Siriyakorn Sangsui
+aka : 0Bxn1
+ClassDetal :   Lab Sheet 6 : Array in Java
