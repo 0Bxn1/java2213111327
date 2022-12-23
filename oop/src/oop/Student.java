@@ -5,14 +5,14 @@ public class Student {
 	public int score;
 	
 	
-public void setName(string Name) {
+public void setName(String Name) {
 	name = Name;
   }
 public String getName() {
 	return name;
   }
-public String setScore(String string) {
-	string = score;
+public void setScore(int Score) {
+	score = Score;
 }
 public int getScore() {
 	return score;
@@ -24,6 +24,10 @@ public boolean checkScore() {
 		return false;
 }
 public boolean isPass() {
+	return (score >= 50)?true:false;
+}
+public String findGrade(int score) {
+	return score < 50?"F" : (score< 55?"D" :(score< 60?"D+" :(score< 65?"C" : (score< 70?"C+" : (score< 75?"B" :(score< 80?"B+" : "A" ) ))) ) );
 	
 }
 

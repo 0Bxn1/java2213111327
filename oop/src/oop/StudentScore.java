@@ -1,28 +1,33 @@
 package oop;
 import java.util.*;
 public class StudentScore {
-
+	static Scanner scn = new Scanner(System.in);
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		Student[] std = new Student[3];
+		
+		System.out.print("How many student in class : ");
+		int num = scn.nextInt();
+		Student[] std = new Student[num];
+		System.out.println();
 		for(int i=0 ; i<std.length; i++) {
-			std[1] = new Student();
+			System.out.println("INPUT INFORMATION OF STUDENT "+(i+1));
+			System.out.println("-------------------------------------");
+			std[i] = new Student();
 			System.out.print("Input student name : ");
-			std[i].setName(scan.next());
+			std[i].setName(scn.next());
 			System.out.print("Input student score : ");
-			std[i].setScore(scan.nextLine());
-			while(!std[i].setScore()) {
-				System.out.print("Input score, again : ");
-				std[i].setScore(scan.next());
+			std[i].setScore(scn.nextInt());
+			while(!std[i].checkScore()) {
+				System.out.print("Input student score, again : ");
+				std[i].setScore(scn.nextInt());
 			}
 			System.out.println();			
 		}
 		System.out.println();
 		System.out.println("LIST OF PASS STUDENT (>=50)");
 		System.out.println("------------------------------");
-		for(int i=0;i<std.length;i++) {
-			if(std[i].isPass()) {
-				System.out.print(">> "+std[i].getName()+" ("+std[i].getName());
+		for(Student _std : std) {
+			if(_std.isPass()) {
+				System.out.println(">> "+_std.getName()+" ("+_std.getScore()+")");
 				
 			}
 		}

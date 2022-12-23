@@ -5,28 +5,35 @@ public class Product {
 	public double price;
     
 public void setld(String ID) {
-	ID = id;
+	id = ID;
     }
 public String getld() {
 	return id;
 	
     }
 public void setUnit(int UNIT) {
-	UNIT = unit;
+	 unit = UNIT ;
     }
 public int getUnit() {
 	return unit;
-	
+	//unit
     }
 public void setPrice(double PRICE) {
-	PRICE = price;
+	price = PRICE ;
     }
 public double getPrice() {
 	return price;
     }
 public double calculate () {
-	 double  unit*price;
-	 
+	 return  unit*price;
      }
-
+public String CheckStatus() {
+	if (unit<5) {
+		return "LOW"; 
+	}else if (unit>=5 && unit<50) {
+		return "NORMAL";
+	}else { 
+		return "HIGH";
+	}
+  }
 }

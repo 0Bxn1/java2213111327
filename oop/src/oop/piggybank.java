@@ -12,7 +12,7 @@ public class piggybank {
 		size = s;
 		
 	}
-	public int getPiggyBank(int s) {
+	public int getPiggyBank() {
 		return size;
 	}
 	public void clear() {
@@ -25,21 +25,21 @@ public class piggybank {
 		if(getTotal() + c <= size ) {
 			one += c;
 		}else {
-			System.out.println("Piggy Bank Full");
+			System.err.println("Piggy Bank Full");
 		}
 		
 	}
 	public void addTwo(int c) {
 		if(getTotal() + (c*2) <= size ) {
-			one += c;
+			two += c;
 		}else {
-			System.out.println("Piggy Bank Full");
+			System.err.println("Piggy Bank Full");
 		}
 		
 	}
 	public void addFive(int c) {
 		if(getTotal() + (c*5) <= size ) {
-			one += c;
+			five += c;
 		}else {
 			System.err.println("Piggy Bank Full");
 		}
@@ -48,7 +48,7 @@ public class piggybank {
 	}
 	public void addTen(int c) {
 		if(getTotal() + (c+10) <= size ) {
-			one += c;
+			ten += c;
 		}else {
 			System.err.println("Piggy Bank Full");
 		}
