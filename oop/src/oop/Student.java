@@ -1,34 +1,50 @@
 package oop;
 
 public class Student {
-	public String name;
-	public int score;
+	private String name;
+	private String address;
+	private String[] courses;
+	private int[] grades; //rang is [0-100]
+	private int numCourses;
+	private static final int MAX_COURSE= 30;
 	
+	public Student (String name, String address) {
+		this.name = name;
+		this.address = address;
+		courses = new String[MAX_COURSE];
+		grades = new int [MAX_COURSE];
+		numCourses = 0;
+		
+	}
+	public String getName() {
+		return this.name;
+	}
+	public String getAddress() {
+		return this.address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String toString() {
+		return getName() +" ("+getAddress()+")";
+	}
+	public void addCourseGrade(String course,int grade) {
+		courses[numCourses] = course;
+		grades[numCourses] = grade;
+	}
+	public void printGrades() {
+		System.out.print(name);
+		for(int i=0;i<numCourses;i++) {
+			System.out.print(" "+courses[i]+":"+grades[i]);
+		}
+		System.out.println();
+	}
 	
-public void setName(String Name) {
-	name = Name;
-  }
-public String getName() {
-	return name;
-  }
-public void setScore(int Score) {
-	score = Score;
-}
-public int getScore() {
-	return score;
-}
-public boolean checkScore() {
-	if (score >= 0 && score <= 100)
-		return true;
-	else
-		return false;
-}
-public boolean isPass() {
-	return (score >= 50)?true:false;
-}
-public String findGrade(int score) {
-	return score < 50?"F" : (score< 55?"D" :(score< 60?"D+" :(score< 65?"C" : (score< 70?"C+" : (score< 75?"B" :(score< 80?"B+" : "A" ) ))) ) );
-	
-}
-
+	public double getAverageGrade() {
+		int sum = 0;
+		for(int i=0;i<numCourses;i++) {
+			sum+=grades[i];
+		}
+		return (double)sum/numCourses;
+	}
 }
