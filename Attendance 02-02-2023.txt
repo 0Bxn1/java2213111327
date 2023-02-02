@@ -1,4 +1,4 @@
 Studentid : 2213111327
 fullname : Siriyakorn Sangsui
 aka : 0Bxn1
-ClassDetal : Composition, Inheritance, and Polymorphism
+ClassDetal : Composition, Inheritance, and Polymorphism 
